@@ -5,13 +5,13 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 def count_th(word): # passes in word = theodor
     if len(word) <= 1: # checks to see if length is less than or equal to 1, because if so, cannot contain "th"
-        return 0
+        return 0 # base case - keeps calling function until meets this 
     else: 
         th_exists = 0 # sets th_exists to 0 first loop
         if word[0:2] == 'th': # if the first 2 letters are "th"
             th_exists = 1 # change count to 1 
 
-        return th_exists + count_th(word[1:]) # returns "heodor" the 2nd time around - shortens name by 1 every time around
+        return th_exists + count_th(word[1:]) # shortens name by 1 every time - "heodor"
 
 # say the word was "theodor"
 
