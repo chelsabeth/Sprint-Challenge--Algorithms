@@ -111,20 +111,21 @@ if __name__ == "__main__":
     robot.sort()
     print(robot._list)
 
-    # STEPS:
-    # set the light on and grab the first item
-    # while the light is on, and while you can move to the right
-    # move to the right and compare items to see if any item is smaller
-    # if the item is smaller, swap the items
-    # will keep going until no longer can go right
-    
-    # search for a spot that is empty
-    # swaps items and turns off light
+# 1st session:
+# while robot's light is on...
+# pick up first item in list, the spot is now none
+# robot goes through each item to the right in the list 
+# and compares to see if any item is smaller than item he is holding
+# if an item is smaller than the one he is holding, swap the two
+# when he cannot go right anymore, he should be holding the smallest number
+# now he must turn around and go left to find the spot that is empty/None
+# replace the spot with None with the card he is holding(smallest card)
 
-    # check to see if robot can go left and do another round
-    # if the item is none
-    # swap items
-    # move right
-    # swap items
+# 2nd session:
+# if robot can go right, skip one to the right and start there
+# repeat 1st session
 
-    # or if we can't move right, swap items, set light to off
+# 3rd session: 
+# when robot cannot skip to the right anymore
+# put the item he is holding back in the spot with None
+# and turn off his light
