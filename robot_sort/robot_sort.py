@@ -96,8 +96,33 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # 1st process here 👇
+        self.set_light_on() # turn on robot's light
+        self.swap_item() # pick up first item - spot is now None
+        while self.light_is_on(): # while the light is on...
+            # robot goes through each item to the right in the list
+            while self.can_move_right(): # as long as robot can move right, this will persist
+                self.move_right() # move right
+                if self.compare_item() == 1:  # compare to see if item in list is smaller than what he is holding
+                    self.swap_item() # if the item in the list is smaller, than swap the two
+                # continues until cannot go right anymore
+            
+            # robot should now have the smallest number of that turn, now he must go left to find the None spot
+            while self.compare_item() != None: # run until spot with None is replaced
+                self.move_left() # move left
+                if self.compare_item() is None:
+                    self.swap_item() # replace None spot with the card robot is holding
+                    #1st process complete
+            
+            # if robot can go right, skip one to the right and repeat 1st process - 2nd process here 👇
+            if self.can_move_right():
+                self.move_right()  # move robot right
+                self.swap_item()  # swap None into list
+            
+            # robot cannot skip anymore to the right - 3rd process here 👇
+            elif not self.can_move_right():  # if robot can't skip to the right anymore
+                self.swap_item() # put item he is holding back at the None spot, which is the end
+                self.set_light_off() # turn off light
 
 
 if __name__ == "__main__":
@@ -111,7 +136,7 @@ if __name__ == "__main__":
     robot.sort()
     print(robot._list)
 
-# 1st session:
+# 1st process:
 # while robot's light is on...
 # pick up first item in list, the spot is now none
 # robot goes through each item to the right in the list 
@@ -121,11 +146,13 @@ if __name__ == "__main__":
 # now he must turn around and go left to find the spot that is empty/None
 # replace the spot with None with the card he is holding(smallest card)
 
-# 2nd session:
+# 2nd process:
 # if robot can go right, skip one to the right and start there
 # repeat 1st session
 
-# 3rd session: 
+# 3rd process: 
 # when robot cannot skip to the right anymore
 # put the item he is holding back in the spot with None
 # and turn off his light
+
+# Jamboard with drawing: https://jamboard.google.com/d/1XiCaVSCCzToYhM_8z8EwYNoJKEQ-sE4OOCIxaYnkIiU/edit?usp=sharing
