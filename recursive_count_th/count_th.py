@@ -16,4 +16,3 @@ def count_th(word): # passes in word = theodor
 # say the word was "theodor"
 
 # python tutor: http://pythontutor.com/live.html#code=def%20count_th%28word%29%3A%0A%20%20%20%20if%20len%28word%29%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20th_exists%20%3D%200%0A%20%20%20%20%20%20%20%20if%20word%5B0%3A2%5D%20%3D%3D%20'th'%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20th_exists%20%3D%201%0A%0A%20%20%20%20%20%20%20%20return%20th_exists%20%2B%20count_th%28word%5B1%3A%5D%29%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%0Acount_th%28'theodor'%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
-    
