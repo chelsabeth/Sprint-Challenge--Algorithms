@@ -110,3 +110,21 @@ if __name__ == "__main__":
 
     robot.sort()
     print(robot._list)
+
+    # STEPS:
+    # set the light on and grab the first item
+    # while the light is on, and while you can move to the right
+    # move to the right and compare items to see if any item is smaller
+    # if the item is smaller, swap the items
+    # will keep going until no longer can go right
+    
+    # search for a spot that is empty
+    # swaps items and turns off light
+
+    # check to see if robot can go left and do another round
+    # if the item is none
+    # swap items
+    # move right
+    # swap items
+
+    # or if we can't move right, swap items, set light to off
