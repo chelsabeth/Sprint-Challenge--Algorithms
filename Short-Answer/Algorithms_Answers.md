@@ -29,4 +29,4 @@ c) O(n)
 
 `RUNTIME:O(log n)`
 
-# I sketched problem out here: https://jamboard.google.com/d/1RPRaoN4YD2JUc4-49Hwme3Zmd7wApzN-rTBVBn6nLec/edit?usp=sharing
+### I sketched problem out here: https://jamboard.google.com/d/1RPRaoN4YD2JUc4-49Hwme3Zmd7wApzN-rTBVBn6nLec/edit?usp=sharing
