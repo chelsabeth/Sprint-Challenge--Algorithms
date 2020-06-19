@@ -111,7 +111,7 @@ class SortingRobot:
             while self.compare_item() != None: # run until spot with None is replaced
                 self.move_left() # move left
                 if self.compare_item() is None:
-                    self.swap_item() # replace None spot with the card robot is holding
+                    self.swap_item() # replace None spot with the item robot is holding
                     #1st process complete
             
             # if robot can go right, skip one to the right and repeat 1st process - 2nd process here 👇
